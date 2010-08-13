@@ -10,7 +10,7 @@ public class PostfixCalc{
 	// --------------------------------------------------
 	
 	/** Pila que contiene los operandos de la calculadora */
-	private Pila<Double> pila;
+	private Pila<Integer> pila;
 	
 	// --------------------------------------------------
 	// Constructor
@@ -21,7 +21,7 @@ public class PostfixCalc{
 	 * post: Se crea la calculadora con la pila vacía
 	 */
 	public PostfixCalc(){
-		pila = new akPila<Double>();
+		pila = new akPila<Integer>();
 	}
 	
 	// --------------------------------------------------
@@ -32,7 +32,7 @@ public class PostfixCalc{
 	 * Ingresa un operando a la pila
 	 * @param operando El operando a ingresar a la pila
 	 */
-	public void ingresarOperando( double operando ){
+	public void ingresarOperando( Integer operando ){
 		pila.push( operando );
 	}
 	
@@ -43,11 +43,11 @@ public class PostfixCalc{
 	 */
 	public String operar( char operador ){
 		if( pila.isEmpty() ) return "0";
-		double op1 = pila.pop();
-		double op2;
-		if( pila.size() == 1 ) op2 = 0;
-		else op2 = pila.pop();
-		double respuesta;
+		Integer op2 = pila.pop();
+		int op1;
+		if( pila.size() == 0 ) op1 = 0;
+		else op1 = pila.pop();
+		int respuesta;
 		switch( operador ){
 		case '+':
 			respuesta = op1 + op2;
@@ -68,15 +68,15 @@ public class PostfixCalc{
 			break;
 		default:
 			return "Error desconocido";
-		}
-		return respuesta + "";
+		} pila.push( respuesta );
+		return pila.peek() + "";
 	}
 	
 	/**
 	 * Reinicia la pila
 	 */
 	public void reset(){
-		pila = new akPila<Double>();
+		pila = new akPila<Integer>();
 	}
 	
 }

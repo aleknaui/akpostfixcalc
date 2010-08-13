@@ -41,6 +41,7 @@ public class akPila<E> implements Pila<E>{
 			return (E) elementos[ size() -1 ];
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public E pop() throws NullPointerException {
 		if( isEmpty() ) throw new NullPointerException( "La lista se encuentra vacía" );
@@ -73,5 +74,4 @@ public class akPila<E> implements Pila<E>{
 			pop();
 		}
 	}
-	
 }
