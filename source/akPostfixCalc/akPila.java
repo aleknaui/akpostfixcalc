@@ -1,3 +1,4 @@
+package akPostfixCalc;
 /**
  * Clase que implementa la estructura de datos Pila
  * @author ale
@@ -49,7 +50,7 @@ public class akPila<E> implements Pila<E>{
 			for( int i = 0; i < nuevos.length; i++ )
 				nuevos[i] = elementos[i];
 			elementos = nuevos;
-			return (E) viejos[ size() -1 ];
+			return (E) viejos[ size() ];
 		}
 	}
 	@Override
