@@ -10,8 +10,8 @@ public abstract class AbstractPila<E> implements Pila<E> {
 
 	// --------------------------------------------------
 	// Metodos
-	// --------------------------------------------------	
-
+	// --------------------------------------------------
+	
 	@Override
 	public boolean isEmpty() {
 		return size() == 0;

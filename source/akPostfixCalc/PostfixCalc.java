@@ -21,7 +21,7 @@ public class PostfixCalc{
 	 * post: Se crea la calculadora con la pila vacía
 	 */
 	public PostfixCalc(){
-		pila = new akPila_Vector<Integer>();
+		pila = new akPila_LinkedList<Integer>();
 	}
 	
 	// --------------------------------------------------
