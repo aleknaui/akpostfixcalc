@@ -1,5 +1,5 @@
 package Test;
-import akPostfixCalc.akPila;
+import akPostfixCalc.akPila_Vector;
 
 import junit.framework.TestCase;
 
@@ -10,7 +10,7 @@ public class akPilaTest extends TestCase {
 	// --------------------------------------------------
 	
 	/** Pila sobre la cual se realizaran las pruebas */
-	private akPila<String> pila;
+	private akPila_Vector<String> pila;
 	
 	// --------------------------------------------------
 	// Metodos
@@ -21,7 +21,7 @@ public class akPilaTest extends TestCase {
 	 * post: La pila se encuentra vacía
 	 */
 	protected void setUpScenario1(){
-		pila = new akPila<String>();
+		pila = new akPila_Vector<String>();
 	}
 	
 	/**
@@ -29,7 +29,7 @@ public class akPilaTest extends TestCase {
 	 * post: La pila contiene los elementos "1", "2" y "3"
 	 */
 	protected void setUpScenario2(){
-		pila = new akPila<String>();
+		pila = new akPila_Vector<String>();
 		pila.push("1");
 		pila.push("2");
 		pila.push("3");

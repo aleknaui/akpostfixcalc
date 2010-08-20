@@ -4,7 +4,7 @@ package akPostfixCalc;
  * @author ale
  * @param <E> Genérico. El tipo de datos que se desea contener en la pila.
  */
-public class akPila<E> implements Pila<E>{
+public class akPila_Vector<E> extends AbstractPila<E>{
 	
 	// --------------------------------------------------
 	// Atributos
@@ -21,7 +21,7 @@ public class akPila<E> implements Pila<E>{
 	 * Crea una nueva pila con 0 elementos.
 	 * post: Se ha creado una pila vacía
 	 */
-	public akPila(){
+	public akPila_Vector(){
 		elementos = new Object[0];
 	}
 	
@@ -29,11 +29,7 @@ public class akPila<E> implements Pila<E>{
 	// Metodos
 	// --------------------------------------------------	
 
-	@Override
-	public boolean isEmpty() {
-		return elementos.length == 0;
-	}
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public E peek() throws NullPointerException {
 		if( isEmpty() ) throw new NullPointerException( "La lista se encuentra vacía" );
@@ -54,6 +50,7 @@ public class akPila<E> implements Pila<E>{
 			return (E) viejos[ size() ];
 		}
 	}
+	
 	@Override
 	public void push( E elemento ) {
 		Object[] nuevos = new Object[ size() + 1 ];
