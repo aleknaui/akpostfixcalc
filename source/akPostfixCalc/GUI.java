@@ -10,13 +10,17 @@ import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 
-public class GUI extends JFrame implements ActionListener {
+public class GUI extends JFrame implements ActionListener{
 	
 	// --------------------------------------------------
 	// Atributos
@@ -185,7 +189,6 @@ public class GUI extends JFrame implements ActionListener {
 			operaciones[i].setForeground( Color.WHITE );
 			operaciones[i].setFont( new Font("Courier New", Font.BOLD, 20) );
 		}
-		
 		add(p1, gb1);
 		gb1.gridy = 1;
 		
@@ -219,7 +222,6 @@ public class GUI extends JFrame implements ActionListener {
 			opciones[i].setForeground( Color.WHITE );
 			opciones[i].setFont( new Font("Courier New", Font.BOLD, 20) );
 		}
-	    
 	    add( p2, gb1 );
 	}
 	
